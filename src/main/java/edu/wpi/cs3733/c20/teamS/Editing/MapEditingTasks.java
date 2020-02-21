@@ -48,7 +48,6 @@ public class MapEditingTasks {
             public void handle(MouseEvent event) {
                 showInfo(current_floor);
                 if(result.get() == 2) {
-                    //popup node info (cancel -> delete circle, ok -> save node)  floor,building,nodetype,longname,shortname
                     Circle circle1 = new Circle(event.getX(), event.getY(), 25);
                     circle1.setStroke(Color.ORANGE);
                     circle1.setFill(Color.ORANGE.deriveColor(1, 1, 1, 0.5));
@@ -113,7 +112,6 @@ public class MapEditingTasks {
         String floornum = "0" + current_floor;
 
         group.getChildren().clear();
-
         group.getChildren().add(imageView);
 
         DatabaseController dbc = new DatabaseController();

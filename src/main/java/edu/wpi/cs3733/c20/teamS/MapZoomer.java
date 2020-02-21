@@ -42,7 +42,6 @@ public class MapZoomer {
             zoomStage--;
             updateImageSize();
         }
-        ;
     }
 
     public void zoomSet() {
@@ -53,9 +52,6 @@ public class MapZoomer {
         double rangeSize = zoomFactor();
         double minRange = 0;
         double maxRange = rangeSize;
-
-        //Bounds newbound = mapView.getBoundsInParent();
-
     }
 
     public int getZoomStage(){

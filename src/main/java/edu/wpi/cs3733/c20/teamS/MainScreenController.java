@@ -320,19 +320,16 @@ public class MainScreenController implements Initializable {
         this.zoomer.zoomIn();
         if (zoomer.getZoomStage() == 3){
             zoomInButton.setDisable(true);
-        }
-        else{
+        }else{
             zoomOutButton.setDisable(false);
             zoomInButton.setDisable(false);
         }
     }
     @FXML private void onZoomOutClicked() {
-        //Node content = scrollPane.getContent();
         this.zoomer.zoomOut();
         if (zoomer.getZoomStage() == -2){
             zoomOutButton.setDisable(true);
-        }
-        else{
+        }else{
             zoomOutButton.setDisable(false);
             zoomInButton.setDisable(false);
         }
@@ -368,7 +365,7 @@ public class MainScreenController implements Initializable {
 
 
     @FXML private void onDirectoryClicked(){
-
+        //DirectoryScreen.showDialog(this.stage);
     }
 
 
