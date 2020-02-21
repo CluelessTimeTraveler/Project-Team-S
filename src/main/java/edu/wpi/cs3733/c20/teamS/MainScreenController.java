@@ -327,7 +327,6 @@ public class MainScreenController implements Initializable {
         }
     }
     @FXML private void onZoomOutClicked() {
-        //Node content = scrollPane.getContent();
         this.zoomer.zoomOut();
         if (zoomer.getZoomStage() == -2){
             zoomOutButton.setDisable(true);
@@ -336,10 +335,6 @@ public class MainScreenController implements Initializable {
             zoomOutButton.setDisable(false);
             zoomInButton.setDisable(false);
         }
-    }
-
-    @FXML private void onResetPathClick(){
-
     }
 
     @FXML private void onBathroomClicked(){

@@ -288,14 +288,26 @@
                               <Insets right="20.0" top="10.0" />
                            </StackPane.margin>
                         </VBox>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: maroon; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="End Session" textFill="WHITE" StackPane.alignment="BOTTOM_CENTER">
+                        <StackPane alignment="BOTTOM_CENTER" StackPane.alignment="CENTER_RIGHT">
                            <StackPane.margin>
-                              <Insets bottom="5.0" />
+                              <Insets bottom="10.0" />
                            </StackPane.margin>
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </JFXButton>
+                           <children>
+                              <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: maroon; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="End Session" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="countDown" alignment="CENTER_RIGHT" text="30" textAlignment="CENTER" textFill="WHITE" StackPane.alignment="BOTTOM_CENTER">
+                                 <StackPane.margin>
+                                    <Insets bottom="12.0" left="170.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
                      </children></StackPane>
                </children>
             </VBox>
@@ -330,7 +342,7 @@
                               </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="2.0" />
                            </VBox.margin>
                         </JFXButton>
                         <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onGiftShopClicked" style="-fx-background-radius: 10; -fx-background-color: #ebebeb;" text="Gift Shop" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
@@ -376,7 +388,7 @@
                               </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                              <Insets top="2.0" />
                            </VBox.margin>
                         </JFXButton>
                         <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onCafeteriaClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Cafeteria" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
@@ -399,7 +411,7 @@
                               </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                              <Insets top="2.0" />
                            </VBox.margin>
                         </JFXButton>
                         <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onPharmacyClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Pharmacy" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
@@ -422,7 +434,7 @@
                               </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                              <Insets top="2.0" />
                            </VBox.margin>
                         </JFXButton>
                         <JFXButton fx:id="onBathroomClicked" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onBathroomClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Bathroom" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
@@ -445,7 +457,7 @@
                               </ImageView>
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="2.0" left="1.0" right="1.0" top="1.0" />
+                              <Insets top="2.0" />
                            </VBox.margin>
                         </JFXButton>
                      </children></VBox>
