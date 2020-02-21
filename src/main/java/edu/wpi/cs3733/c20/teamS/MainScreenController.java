@@ -341,4 +341,39 @@ public class MainScreenController implements Initializable {
     @FXML private void onResetPathClick(){
 
     }
+
+    @FXML private void onBathroomClicked(){
+
+    }
+
+    @FXML private void onPharmacyClicked(){
+
+    }
+
+    @FXML private void onCafeteriaClicked(){
+
+    }
+
+    @FXML private void onCoffeeClicked(){
+
+    }
+
+    @FXML private void onGiftShopClicked(){
+
+    }
+
+    @FXML private void onInfoDeskClicked(){
+
+    }
+
+    @FXML private void onResetPathClicked(){
+
+    }
+
+
+    @FXML private void onDirectoryClicked(){
+
+    }
+
+
 }

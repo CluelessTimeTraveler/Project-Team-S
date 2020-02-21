@@ -333,7 +333,7 @@
                               <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </VBox.margin>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 10; -fx-background-color: #ebebeb;" text="Gift Shop" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onGiftShopClicked" style="-fx-background-radius: 10; -fx-background-color: #ebebeb;" text="Gift Shop" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
                            <VBox.margin>
                               <Insets bottom="1.0" left="1.0" right="1.0" top="2.0" />
                            </VBox.margin>
@@ -379,7 +379,7 @@
                               <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </VBox.margin>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onFoodCourtClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Cafeteria" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onCafeteriaClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Cafeteria" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
                            <ripplerFill>
                               <LinearGradient endX="1.0" endY="1.0" startX="0.23333333333333334" startY="0.22380952380952382">
                                  <stops>
@@ -402,7 +402,7 @@
                               <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                            </VBox.margin>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onVendingClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Pharmacy" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" focusTraversable="false" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onPharmacyClicked" style="-fx-background-color: #ebebeb; -fx-background-radius: 10;" text="Pharmacy" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
                            <ripplerFill>
                               <LinearGradient endX="1.0" endY="1.0" startX="0.23333333333333334" startY="0.22380952380952382">
                                  <stops>
