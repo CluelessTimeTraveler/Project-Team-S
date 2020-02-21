@@ -20,6 +20,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
+
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -94,14 +96,12 @@ public class PathDisplay {
             System.out.println(words.size());
             int offset = 30;
             parentVBox.getChildren().clear();
-            JFXTextField directionLabel = new JFXTextField();
-            directionLabel.setText("Directions");
             JFXTextField space = new JFXTextField();
-            //directionLabel.setFont("Font name=System Bold size=24.0");
             for(String direct : words) {
                 JFXTextArea text = new JFXTextArea();
                 text.setText(direct);
-                //text.setWrapText(true);
+                text.setFont(Font.font ("System", 20));
+                text.setWrapText(true);
                 text.setPrefHeight(offset);
               //  text.setTranslateY(offset);
               //  offset += 10;
