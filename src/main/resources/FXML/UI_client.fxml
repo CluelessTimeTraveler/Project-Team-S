@@ -235,7 +235,7 @@
                         <JFXScrollPane alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefHeight="701.0" prefWidth="1029.0" StackPane.alignment="TOP_LEFT" />
                         <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hmax="2.0" hvalue="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #bfbdba;" vbarPolicy="NEVER" vvalue="0.5" StackPane.alignment="TOP_LEFT">
                            <content>
-                              <ImageView fx:id="mapImage" focusTraversable="true" preserveRatio="true">
+                              <ImageView fx:id="mapImage" focusTraversable="true" preserveRatio="true" scaleX="0.4" scaleY="0.4">
                                  <image>
                                     <Image url="@../images/Floors/HospitalFloor2.png" />
                                  </image>

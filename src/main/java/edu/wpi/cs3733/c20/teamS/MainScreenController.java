@@ -38,6 +38,7 @@ public class MainScreenController implements Initializable {
     private PathDisplay tester2;
     private boolean flip = true;
     private MapZoomer zoomer;
+
     private FloorSelector floorSelector;
 
     private static class Floor {
@@ -318,7 +319,7 @@ public class MainScreenController implements Initializable {
     }
     @FXML private void onZoomInClicked() {
         this.zoomer.zoomIn();
-        if (zoomer.getZoomStage() == 3){
+        if (zoomer.getZoomStage() == 2){
             zoomInButton.setDisable(true);
         }else{
             zoomOutButton.setDisable(false);

@@ -8,7 +8,7 @@ public class MapZoomer {
     private final ScrollPane scrollPane;
     private int zoomStage;
     private static final int minZoomStage = -2;
-    private static final int maxZoomStage = 3;
+    private static final int maxZoomStage = 2;
 
     public MapZoomer(ImageView mapView, ScrollPane scrollPane) {
         this.mapView = mapView;
