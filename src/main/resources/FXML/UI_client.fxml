@@ -288,12 +288,12 @@
                               <Insets right="20.0" top="10.0" />
                            </StackPane.margin>
                         </VBox>
-                        <StackPane alignment="BOTTOM_CENTER" StackPane.alignment="CENTER_RIGHT">
+                        <StackPane alignment="BOTTOM_CENTER" maxHeight="50.0" maxWidth="200.0" prefHeight="200.0" StackPane.alignment="BOTTOM_CENTER">
                            <StackPane.margin>
                               <Insets bottom="10.0" />
                            </StackPane.margin>
                            <children>
-                              <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: maroon; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="End Session" textFill="WHITE">
+                              <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: maroon; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="End Session" textFill="WHITE" StackPane.alignment="BOTTOM_CENTER">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
