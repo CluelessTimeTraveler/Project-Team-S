@@ -337,4 +337,8 @@ public class MainScreenController implements Initializable {
             zoomInButton.setDisable(false);
         }
     }
+
+    @FXML private void onResetPathClick(){
+
+    }
 }

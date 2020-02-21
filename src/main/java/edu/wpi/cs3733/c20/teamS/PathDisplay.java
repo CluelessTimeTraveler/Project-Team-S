@@ -94,8 +94,9 @@ public class PathDisplay {
             WrittenInstructions directions = new WrittenInstructions(work);
             ArrayList<String> words = directions.directions();
             System.out.println(words.size());
-            int offset = 30;
+            int offset = 70;
             parentVBox.getChildren().clear();
+            parentVBox.getParent().getParent().setVisible(true);
             JFXTextField space = new JFXTextField();
             for(String direct : words) {
                 JFXTextArea text = new JFXTextArea();
