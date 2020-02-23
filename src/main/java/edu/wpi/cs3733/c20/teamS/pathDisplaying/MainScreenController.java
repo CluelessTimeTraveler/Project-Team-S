@@ -52,6 +52,7 @@ public class MainScreenController implements Initializable {
     private boolean flip = true;
     //endregion
 
+
     private static class Floor {
         public final Image image;
         public final JFXButton button;
@@ -312,6 +313,7 @@ public class MainScreenController implements Initializable {
     @FXML private void onZoomInClicked() {
         zoomer.zoomIn();
         zoomInButton.setDisable(!zoomer.canZoomIn());
+        //mapImage.setViewport();
     }
     @FXML private void onZoomOutClicked() {
         //Node content = scrollPane.getContent();
