@@ -2,6 +2,7 @@ package edu.wpi.cs3733.c20.teamS.pathDisplaying;
 
 import com.google.common.graph.MutableGraph;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXScrollPane;
 import edu.wpi.cs3733.c20.teamS.Editing.NodeHitbox;
 import edu.wpi.cs3733.c20.teamS.LoginScreen;
 import edu.wpi.cs3733.c20.teamS.ThrowHelper;
@@ -15,6 +16,7 @@ import io.reactivex.rxjava3.subjects.PublishSubject;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -29,6 +31,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.layout.VBox;
+import org.w3c.dom.css.Rect;
 
 import java.net.URL;
 import java.util.*;
@@ -312,13 +315,15 @@ public class MainScreenController implements Initializable {
     }
     @FXML private void onZoomInClicked() {
         zoomer.zoomIn();
+        zoomOutButton.setDisable(false);
         zoomInButton.setDisable(!zoomer.canZoomIn());
-        //mapImage.setViewport();
     }
     @FXML private void onZoomOutClicked() {
         //Node content = scrollPane.getContent();
         this.zoomer.zoomOut();
+        zoomInButton.setDisable(false);
         zoomOutButton.setDisable(!zoomer.canZoomOut());
+
     }
     //endregion
 }

@@ -30,7 +30,6 @@ public class MapZoomer {
         if (zoomStage < 0) {
             return 1.0 / result;
         }
-
         return result;
     }
 
