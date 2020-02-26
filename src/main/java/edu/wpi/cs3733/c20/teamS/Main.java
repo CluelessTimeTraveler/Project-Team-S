@@ -16,17 +16,12 @@ public class Main extends Application {
         DatabaseController dbc = new DatabaseController();
         dbc.importStartUpData();
 
-        GiftRequest gr = new GiftRequest();
-        try{
-            gr.run(0,0,0,0,"","Derp");
-        }catch(ServiceException se){
 
-        }
 
-//        if (START_ON_ADMIN_SCREEN)
-//            new MapEditingScreen(primaryStage, new Employee(17, "Bob", AccessLevel.ADMIN));
-//        else
-//            new MainToLoginScreen(primaryStage);
+        if (START_ON_ADMIN_SCREEN)
+            new MapEditingScreen(primaryStage, new Employee(17, "Bob", AccessLevel.ADMIN));
+        else
+            new MainToLoginScreen(primaryStage);
     }
 
 
