@@ -2,6 +2,7 @@ package edu.wpi.cs3733.c20.teamS;
 
 import edu.wpi.cs3733.c20.teamS.Editing.MapEditingScreen;
 
+import edu.wpi.cs3733.c20.teamS.Exceptions.ServiceException;
 import edu.wpi.cs3733.c20.teamS.database.DatabaseController;
 import edu.wpi.cs3733.c20.teamS.serviceRequests.AccessLevel;
 import edu.wpi.cs3733.c20.teamS.serviceRequests.Employee;
@@ -15,11 +16,20 @@ public class Main extends Application {
         DatabaseController dbc = new DatabaseController();
         dbc.importStartUpData();
 
-        if (START_ON_ADMIN_SCREEN)
-            new MapEditingScreen(primaryStage, new Employee(17, "Bob", AccessLevel.ADMIN));
-        else
-            new MainToLoginScreen(primaryStage);
+        GiftRequest gr = new GiftRequest();
+        try{
+            gr.run(0,0,0,0,"","Derp");
+        }catch(ServiceException se){
+
+        }
+
+//        if (START_ON_ADMIN_SCREEN)
+//            new MapEditingScreen(primaryStage, new Employee(17, "Bob", AccessLevel.ADMIN));
+//        else
+//            new MainToLoginScreen(primaryStage);
     }
+
+
     //9003,staff,staff,2,Wilson,Wong
     public static void main(String[] args) {
         App.launch();
