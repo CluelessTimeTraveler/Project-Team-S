@@ -13,6 +13,7 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.NodeOrientation;
 import javafx.geometry.Point3D;
 import javafx.scene.*;
 import javafx.scene.control.Button;
@@ -132,7 +133,7 @@ public class ThreeDimensions extends Application {
         s.setFill(Color.LIGHTYELLOW);
         //s.setEffect(new Bloom());
         s.setTranslateX(nodes.get(nodes.size()-1).getxCoordinate() / 5 - 247);
-        s.setTranslateZ(zplace1.get(nodes.get(nodes.size()-1).getFloor()));
+        s.setTranslateZ(zplace1.get(nodes.get(nodes.size()-1).getFloor())-3);
         s.setTranslateY(nodes.get(nodes.size()-1).getyCoordinate() / 5 - 148);
 
         Box wongBox = new Box();
@@ -147,6 +148,8 @@ public class ThreeDimensions extends Application {
 
         double total  =  0;
         double length;
+        Line line69 = new Line(0,0,0,0);
+        Line line420 = new Line(0,0,0,0);
         SequentialTransition sequentialTransition = new SequentialTransition();
         for(int i = 0; i < nodes.size() - 1; i++) {
             HashMap<Integer, Integer> zplace = new HashMap<Integer, Integer>();
@@ -285,13 +288,24 @@ public class ThreeDimensions extends Application {
             int floor1 = startNode.getFloor();
             int floor2 = endNode.getFloor();
             boolean sameFloor = (floor1 == floor2);
+            Rotate rot_at_ion = new Rotate(0);
+            rot_at_ion.setPivotX(0);
+            rot_at_ion.setPivotY(0);
+            rot_at_ion.setPivotZ(0);
+            rot_at_ion.setAxis(new Point3D(0,0,1));
 
             for(int j = 0; j < meshViews.length; j++) {
+                MeshView ecksDee = meshViews[j];
                 length = Math.sqrt(Math.pow(Math.abs(endNode.getxCoordinate()-startNode.getxCoordinate()),2) + Math.pow(Math.abs((endNode.getyCoordinate()- startNode.getyCoordinate())),2));
-                TranslateTransition tt = new TranslateTransition(Duration.seconds(getPathTime(length)), meshViews[j]); //can change mph
+                line420 = new Line(startNode.getxCoordinate(), startNode.getyCoordinate(), endNode.getxCoordinate(), endNode.getyCoordinate());
+
+                rot_at_ion.setAngle(getAngle(line69, line420));
+                ecksDee.setRotate(rot_at_ion.getAngle());
+
+                TranslateTransition tt = new TranslateTransition(Duration.seconds(getPathTime(length)), ecksDee); //can change mph
                 tt.setInterpolator(Interpolator.LINEAR);
                 if (!sameFloor) {
-                    length = (endNode.getFloor() - startNode.getFloor())*100.0;
+                    length = Math.abs((endNode.getFloor() - startNode.getFloor()))*100.0;
                     tt.setDuration(Duration.seconds(getPathTime(length)));
                 }
                 tt.setFromZ(zplace.get(startNode.getFloor()) - 27);
@@ -303,7 +317,7 @@ public class ThreeDimensions extends Application {
                 tt.setCycleCount(1);
                 st.getChildren().add(tt);
                 //tt.setAutoReverse(true);
-
+                line69 = line420;
             }
         }
         st.setCycleCount(Timeline.INDEFINITE);
@@ -348,7 +362,7 @@ public class ThreeDimensions extends Application {
                 length = Math.sqrt(Math.pow(Math.abs(endNode.getxCoordinate()-startNode.getxCoordinate()), 2) + Math.pow(Math.abs(endNode.getyCoordinate()-startNode.getyCoordinate()), 2));
                 TranslateTransition tt = new TranslateTransition(Duration.seconds(getPathTime(length)), clari[j]); //can change mph
                 if (!sameFloor) {
-                    length = (endNode.getFloor() - startNode.getFloor())*100.0;
+                    length = Math.abs((endNode.getFloor() - startNode.getFloor()))*100.0;
                     tt.setDuration(Duration.seconds(getPathTime(length)));
                 }
                 tt.setFromZ(zplace.get(startNode.getFloor()) - 80);
@@ -407,7 +421,7 @@ public class ThreeDimensions extends Application {
                 length = Math.sqrt(Math.pow(Math.abs(endNode.getxCoordinate()-startNode.getxCoordinate()), 2) + Math.pow(Math.abs(endNode.getyCoordinate()-startNode.getyCoordinate()), 2));
                 TranslateTransition tt = new TranslateTransition(Duration.seconds(getPathTime(length)), hati[j]); //can change mph
                 if (!sameFloor) {
-                    length = (endNode.getFloor() - startNode.getFloor())*100.0;
+                    length = Math.abs((endNode.getFloor() - startNode.getFloor()))*100.0;
                     tt.setDuration(Duration.seconds(getPathTime(length)));
                 }
                 tt.setFromZ(zplace.get(startNode.getFloor()) - 80);
@@ -939,6 +953,17 @@ public class ThreeDimensions extends Application {
     }
     private double getPathTime(double lengthOfPath){
         return lengthOfPath/200;
+    }
+
+    private double getAngle(Line l999, Line l23420){
+        if(l23420.getEndX() == l23420.getStartY()){
+            return 0;
+        }else {
+            double angleE = Math.atan2(l999.getStartY() - l999.getEndY(), l999.getStartX() - l999.getEndX());
+            double angleW = Math.atan2(l23420.getStartY() - l23420.getEndY(), l23420.getStartX() - l23420.getEndX());
+            //System.out.println(Math.toDegrees(angleE-angleW));
+            return Math.toDegrees(angleE-angleW);
+        }
     }
 }
 
